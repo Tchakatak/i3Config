@@ -1,7 +1,7 @@
 # i3 config file tchakatak V2
 
-     # Set modifier command to Win
-     set $mod Mod4
+     	# Set modifier command to Win
+       	set $mod Mod4
 
 #################################################################
 ###
@@ -101,7 +101,7 @@
 	# reload the configuration file
 	bindsym $mod+Shift+c reload
 
-	#&& restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+	# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 	bindsym $mod+Shift+r restart
 
 	# exit i3 (logs you out of your X session)
@@ -176,10 +176,10 @@ bar {
 ###
 #############################################################################
 
-	#Compton Composite manager
+	# Compton Composite manager
 	exec --no-startup-id compton --config ~/.config/i3/compton.conf -b
 
-	#Nitrogen Wallpaper
+	# Nitrogen Wallpaper
 	exec --no-startup-id nitrogen --restore
 
 
