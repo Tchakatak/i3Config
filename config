@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 	#i3 config file tchakatak V2
 	
 	# Set modifier command to Win
+=======
+# i3 config file tchakatak V2
+
+     	# Set modifier command to Win
+>>>>>>> 4073ae9e3f6814aa254494415f86914766c24923
        	set $mod Mod4
 
 #################################################################
@@ -19,9 +25,14 @@
 	bindsym $mod+Shift+q kill
 
 	# start dmenu (a program launcher)
+<<<<<<< HEAD
 	# bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn 'DejaVu Sans Mono-9'"
         bindsym $mod+Shift+d exec rofi -show run
 	
+=======
+	bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn 'DejaVu Sans Mono-9'"
+
+>>>>>>> 4073ae9e3f6814aa254494415f86914766c24923
 #################################################################
 ###
 ###     Windows Navigation
@@ -93,6 +104,7 @@
 	bindsym $mod+Shift+9 move container to workspace 9
 	bindsym $mod+Shift+0 move container to workspace 10
 
+<<<<<<< HEAD
 
 
 #################################################################
@@ -108,6 +120,8 @@
 	client.unfocused #2b2b2b #2b2b2b #e3e3e3 #2b2b2b #2b2b2b
         client.focused_inactive #2b2b2b #2b2b2b #e3e3e3 #2b2b2b #2b2b2b
 
+=======
+>>>>>>> 4073ae9e3f6814aa254494415f86914766c24923
 #################################################################
 ###
 ###     i3 Restart / Exit
@@ -171,7 +185,11 @@ mode "resize" {
 
 bar {
         status_command i3status
+<<<<<<< HEAD
 	position bottom
+=======
+	position top
+>>>>>>> 4073ae9e3f6814aa254494415f86914766c24923
 }
 
 
@@ -181,11 +199,14 @@ bar {
 	bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
 	bindsym XF86AudioMicMute exec pactl set-source-mute 1 toggle # mute mic
 
+<<<<<<< HEAD
 	# Player Audio Controls 
 	bindsym XF86AudioPlay exec playerctl play-pause
 	bindsym XF86AudioPrev exec playerctl previous
 	bindsym XF86AudioNext exec playerctl next
 
+=======
+>>>>>>> 4073ae9e3f6814aa254494415f86914766c24923
 	# Scrot / Screenshot commands
 	bindsym $mod+Print exec scrot $HOME/Pictures/ScreenShoots/`date +%Y-%m-%d_%H:%M:%S`.png
 	bindsym $mod+Shift+Print exec scrot -u $HOME/Pictures/ScreenShoots/`date +%Y-%m-%d_%H:%M:%S`.png
@@ -193,13 +214,18 @@ bar {
 
 #############################################################################
 ###
+<<<<<<< HEAD
 ###	Startup items
+=======
+###	Display items
+>>>>>>> 4073ae9e3f6814aa254494415f86914766c24923
 ###
 #############################################################################
 
 	# Compton Composite manager
 	exec --no-startup-id compton --config ~/.config/i3/compton.conf -b
 
+<<<<<<< HEAD
 	# using setsid wal (package python-pywal) to set wallpaper
 	exec --no-startup-id nitrogen --restore
 	#exec --no-startup-id setsid wal -i ~/Nextcloud/Wallpaper/Wallpaper/Flat-Wallpapers-Full-HD-Free-Download-Wallpaperxyz.com-6.png
@@ -212,6 +238,11 @@ bar {
 	
 	# Battery (Notification)
 	exec --no-startup-id /home/tchakatak/.config/i3/battery.sh
+=======
+	# Nitrogen Wallpaper
+	exec --no-startup-id nitrogen --restore
+
+>>>>>>> 4073ae9e3f6814aa254494415f86914766c24923
 
 ############################################################################
 ###
@@ -223,7 +254,11 @@ bar {
         bindsym $mod+Shift+l exec /home/tchakatak/.config/i3/lock.sh
 
 	# Autolock screen after 5 minutes and suspend
+<<<<<<< HEAD
         # exec_always --no-startup-id xautolock -time 5 -locker "i3lock -c 000000 && sleep 1" -killtime 10 -killer "systemctl suspend" -detectsleep -secure
+=======
+        exec_always --no-startup-id xautolock -time 5 -locker "i3lock -c 000000  && sleep 1" -killtime 10 -killer "systemctl suspend" -detectsleep
+>>>>>>> 4073ae9e3f6814aa254494415f86914766c24923
 
 
 # EOF
