@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-IMAGE=/home/tachikomas/Wallpaper/Firefox_wallpaper.png
+IMAGE=/home/tchakatak/Nextcloud/Wallpaper/Wallpaper/170101.png
 
 
 # Alternate screenshot method with imagemagick. NOTE: it is much slower
@@ -16,9 +16,9 @@ IMAGE=/home/tachikomas/Wallpaper/Firefox_wallpaper.png
 #BLURTYPE="5x2" # 3.80s
 #BLURTYPE="2x8" # 2.90s
 #BLURTYPE="2x3" # 2.92s
-BLURTYPE="0x8"
+#BLURTYPE="1x8"
 
 # Get the screenshot, add the blur and lock the screen with it
 
-convert $IMAGE -blur $BLURTYPE $IMAGE
-i3lock -i $IMAGE
+#convert $IMAGE -blur $BLURTYPE $IMAGE
+i2lock -c 000000
