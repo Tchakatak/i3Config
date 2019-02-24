@@ -212,6 +212,9 @@ bar {
 	
 	# Battery (Notification)
 	exec --no-startup-id /home/tchakatak/.config/i3/battery.sh
+	
+	# Redlight (Nice for night :D)
+	exec --no-startup-id redshift -c /home/tchakatak/.config/redshift/redshift.conf
 
 ############################################################################
 ###
