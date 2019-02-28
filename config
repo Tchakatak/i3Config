@@ -228,7 +228,6 @@ bar {
         bindsym $mod+Shift+l exec /home/tchakatak/.config/i3/lock.sh
 
 	# Autolock screen after 5 minutes and suspend
-        exec_always --no-startup-id xautolock -time 5 -locker "i3lock -c 000000 && sleep 1" -killtime 10 -killer "systemctl suspend" -detectsleep -secure -notify 5
-
+        exec_always --no-startup-id xautolock -time 5 -locker "i3lock -n -c 000000 && sleep 1" -killtime 10 -killer "systemctl suspend" -detectsleep -notify 10 -notifier "notify-send 'Locking'" -corners 0+0- -cornerdelay 10 -cornerredelay 10
 
 # EOF

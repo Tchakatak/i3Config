@@ -21,4 +21,4 @@ IMAGE=/home/tchakatak/Nextcloud/Wallpaper/Wallpaper/170101.png
 # Get the screenshot, add the blur and lock the screen with it
 
 #convert $IMAGE -blur $BLURTYPE $IMAGE
-i3lock -c 000000
+i3lock -n -c 000000
