@@ -198,7 +198,7 @@
 #############################################################################
 
 	# Compton Composite manager
-	exec --no-startup-id compton --config ~/.config/i3/compton.conf -b
+	exec --no-startup-id compton --config ~/.config/Compton/compton.conf -b
 
 	# Nitrogen for nice wallpaper (eyecandy)
     exec --no-startup-id nitrogen --restore
