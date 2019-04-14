@@ -1,13 +1,11 @@
-	#i3 config file tchakatak V2
-	
-	# Set modifier command to Win
-       	set $mod Mod4
-
 #################################################################
 ###
 ###	Base Setup 
 ###
 #################################################################
+
+    # Set mod to Win
+    set $mod Mod4
 
 	# Use Mouse+$mod to drag floating windows to their wanted position
 	floating_modifier $mod
@@ -106,7 +104,7 @@
 	client.urgent #f2740b #f2740b #e3e3e3 #f2740b
 	client.focused #006865 #006865 #e3e3e3 #006865 #2b2b2b
 	client.unfocused #2b2b2b #2b2b2b #e3e3e3 #2b2b2b #2b2b2b
-        client.focused_inactive #2b2b2b #2b2b2b #e3e3e3 #2b2b2b #2b2b2b
+    client.focused_inactive #2b2b2b #2b2b2b #e3e3e3 #2b2b2b #2b2b2b
 
 #################################################################
 ###
@@ -123,20 +121,17 @@
 	# exit i3 (logs you out of your X session)
 	bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-	# poweroff 
-	bindsym $mod+Shift+p exec "i3-nagbar -t warning -m 'Power off' -b 'Yes, poweroff' '/bin/poweroff'"
-
-#################################################################
+###############################################################
 ###
 ###     Resize windows
 ###
-#################################################################
+###############################################################
 	
 	# Dont Draw the window top bar (Saving space on X230)
 	new_window 1pixel
 
 	# resize window 10px mode
-mode "resize" {
+    mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
         # Pressing left will shrink the window’s width.
@@ -157,16 +152,16 @@ mode "resize" {
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
-}
+    }
 
 	bindsym $mod+r mode "resize"
 
 	
-        # Allow resizing 1px/1px in all directions the active window
-        bindsym $mod+Ctrl+Right resize shrink width 1 px or 1 ppt
-        bindsym $mod+Ctrl+Up resize grow height 1 px or 1 ppt
-        bindsym $mod+Ctrl+Down resize shrink height 1 px or 1 ppt
-        bindsym $mod+Ctrl+Left resize grow width 1 px or 1 ppt
+    # Allow resizing 1px/1px in all directions the active window
+    bindsym $mod+Ctrl+Right resize shrink width 1 px or 1 ppt
+    bindsym $mod+Ctrl+Up resize grow height 1 px or 1 ppt
+    bindsym $mod+Ctrl+Down resize shrink height 1 px or 1 ppt
+    bindsym $mod+Ctrl+Left resize grow width 1 px or 1 ppt
 
 #############################################################################
 ###
@@ -175,11 +170,10 @@ mode "resize" {
 #############################################################################
 
 
-bar {
+    bar {
         status_command i3status
-	position bottom
-	
-}
+	    position bottom
+	}
 
 	# Pulse Audio controls
   	bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
@@ -206,8 +200,8 @@ bar {
 	# Compton Composite manager
 	exec --no-startup-id compton --config ~/.config/i3/compton.conf -b
 
-	# using setsid wal (package python-pywal) to set wallpaper
-	exec --no-startup-id nitrogen --restore
+	# Nitrogen for nice wallpaper (eyecandy)
+    exec --no-startup-id nitrogen --restore
 
 	# NextCloud (Cloud) 
 	exec --no-startup-id nextcloud
@@ -215,11 +209,8 @@ bar {
 	# Dunst (Notification daemon)
 	exec --no-startup-id dunst
 	
-	# Battery (Notification)
-	exec --no-startup-id /home/tchakatak/.config/i3/battery.sh
-	
 	# Redlight (Nice for night :D)
-	# exec --no-startup-id redshift -c ~/.config/redshift/redshift.conf
+	exec --no-startup-id redshift -c ~/.config/redshift/redshift.conf
 
 ############################################################################
 ###
@@ -227,10 +218,9 @@ bar {
 ###
 ############################################################################
 
-        # Lock script
-        bindsym $mod+Shift+l exec ~/.config/i3/lock.sh
+    # Lock script
+    bindsym $mod+Shift+l exec ~/.config/i3/lock.sh
 
-	# Autolock screen after 5 minutes and suspend
-        exec_always --no-startup-id xautolock -time 5 -locker "i3lock -n -c 000000 && sleep 1" -killtime 10 -killer "systemctl suspend" -detectsleep -notify 10 -notifier "notify-send 'Locking'" -corners 0+0- -cornerdelay 10 -cornerredelay 10
 
 # EOF
+

@@ -1,4 +1,5 @@
-#!/bin/bash
+
+
 
 THRESHOLD=85
 
@@ -19,5 +20,4 @@ if [[ $charge_status == 'Discharging' ]] && [[ $charge_percent -le $THRESHOLD ]]
   current_date_time="`date +%Y%m%d%H%M%S`";
   echo "[BATTERY LOG] = $charge_percent% on $current_date_time"
 fi
-
 
