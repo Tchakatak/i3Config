@@ -18,7 +18,7 @@
 
 	# start dmenu (a program launcher)
 	# bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn 'DejaVu Sans Mono-9'"
-        bindsym $mod+Shift+d exec rofi -show run -theme flat-orange -font "mono 10" 
+    bindsym $mod+Shift+d exec rofi -show run -theme flat-orange -font "mono 10" 
 	
 #################################################################
 ###
@@ -115,7 +115,8 @@
 	# reload the configuration file
 	bindsym $mod+Shift+c reload
 
-	# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+	
+    # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 	bindsym $mod+Shift+r restart
 
 	# exit i3 (logs you out of your X session)
@@ -128,7 +129,7 @@
 ###############################################################
 	
 	# Dont Draw the window top bar (Saving space on X230)
-	new_window 1pixel
+	#new_window 1pixel
 
 	# resize window 10px mode
     mode "resize" {
@@ -202,7 +203,7 @@
 
 	# Nitrogen for nice wallpaper (eyecandy)
     exec --no-startup-id nitrogen --restore
-
+    
 	# NextCloud (Cloud) 
 	exec --no-startup-id nextcloud
 
@@ -212,6 +213,9 @@
 	# Redlight (Nice for night :D)
 	exec --no-startup-id redshift -c ~/.config/redshift/redshift.conf
 
+    # For nice terminal conf
+    exec --no-startup-id xrdb .xressources
+    
 ############################################################################
 ###
 ###	Security items
