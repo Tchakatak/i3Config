@@ -18,7 +18,7 @@
 
 	# start dmenu (a program launcher)
 	# bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn 'DejaVu Sans Mono-9'"
-    bindsym $mod+Shift+d exec rofi -show run -theme flat-orange -font "mono 10" 
+    bindsym $mod+Shift+d exec rofi -show run -theme Pop-Dark -font "mono 10" 
 	
 #################################################################
 ###
@@ -129,7 +129,7 @@
 ###############################################################
 	
 	# Dont Draw the window top bar (Saving space on X230)
-	#new_window 1pixel
+    #new_window 1pixel
 
 	# resize window 10px mode
     mode "resize" {
@@ -173,7 +173,7 @@
 
     bar {
         status_command i3status
-	    position bottom
+        position top
 	}
 
 	# Pulse Audio controls
@@ -199,7 +199,7 @@
 #############################################################################
 
 	# Compton Composite manager
-	exec --no-startup-id compton --config ~/.config/Compton/compton.conf -b
+	exec --no-startup-id picom --config ~/.config/Compton/compton.conf -b
 
 	# Nitrogen for nice wallpaper (eyecandy)
     exec --no-startup-id nitrogen --restore
