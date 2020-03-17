@@ -231,7 +231,13 @@
 
     # For nice terminal conf
     exec --no-startup-id xrdb .xressources
-   
+    
+    # For pa applet and change bluetooth source
+    exec --no-startup-id pa-applet
+    
+    # For Bluetooth
+    exec --no-startup-id blueman-applet
+
 ############################################################################
 ###
 ###	Security items
