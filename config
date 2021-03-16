@@ -19,7 +19,8 @@
 	# start dmenu (a program launcher)
 	# bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn 'DejaVu Sans Mono-9'"
     bindsym $mod+Shift+d exec rofi -show run -theme Pop-Dark -font "hack 10" 
-	
+
+    font pango:hack 9
 #################################################################
 ###
 ###     Windows Navigation
@@ -170,7 +171,7 @@
 ###
 #############################################################################
 
-
+    
     bar {
     font pango:Hack, DejaVu Sans Mono, FontAwesome 9
     position top
@@ -204,10 +205,10 @@
 	bindsym $mod+Alt+Print exec scrot -s $HOME/Pictures/ScreenShoots/`date +%Y-%m-%d_%H:%M:%S`.png
 
     # Gaps 
-    #for_window [class="^.*"] border pixel 0
+    #for_window [class="^.*"] border pixel 1
 
-    #gaps inner 15
-    #gaps outer 5
+    gaps inner 4
+    gaps outer 4
 
 #############################################################################
 ###
@@ -219,9 +220,10 @@
 	exec --no-startup-id picom --config ~/.config/Compton/compton.conf -b
 
 	# Nitrogen for nice wallpaper (eyecandy)
-    exec --no-startup-id nitrogen --restore
-    
-	# NextCloud (Cloud) 
+    exec --no-startup-id xsetroot -solid "#333333"
+
+
+    #NextCloud (Cloud) 
 	exec --no-startup-id nextcloud
 
 	# Dunst (Notification daemon)

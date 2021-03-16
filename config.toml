@@ -32,15 +32,6 @@ speed_up = false
 speed_down = false
 interval = 1
 
-
-[[block]]
-block = "net"
-device = "mullvad-at2"
-speed_up = false
-speed_down = false
-interval = 1
-
-
 [[block]]
 block = "sound"
 
@@ -52,4 +43,4 @@ format = "{percentage}% {time}"
 [[block]]
 block = "time"
 interval = 60
-format = "%a %d/%m %R"
+format = "%d/%m %R"
